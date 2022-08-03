@@ -10,18 +10,16 @@
     begin
         CustList.OpenView();
         CustList.Close();
-        // if (not MessageDisplayed) then
-        //     ERROR('Message was not displayed!');
+        if (not MessageDisplayed) then
+            ERROR('Message was not displayed!');
     end;
 
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        //MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world - Aries');
-        Assert.IsTrue(StrPos(Message, 'App published: Hello world - Aries') > 0, Message);
+        MessageDisplayed := MessageDisplayed or (StrLen(Message) > 0);
     end;
 
     var
         MessageDisplayed: Boolean;
-        Assert: Codeunit Assert;
 }
