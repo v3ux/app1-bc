@@ -23,4 +23,5 @@
 
     var
         MessageDisplayed: Boolean;
+        Assert: Codeunit Assert;
 }
