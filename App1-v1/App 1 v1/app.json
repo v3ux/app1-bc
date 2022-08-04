@@ -16,8 +16,8 @@
     "screenshots":  [
 
                     ],
-    "platform":  "1.0.0.0",
-    "application":  "19.0.0.0",
+    "platform":  "20.0.0.0",
+    "application":  "20.0.0.0",
     "idRanges":  [
                      {
                          "from":  50000,
