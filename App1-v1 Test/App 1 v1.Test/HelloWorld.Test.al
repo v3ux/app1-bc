@@ -11,20 +11,14 @@
         MessageDisplayed := false;
 
         CustList.OpenView();
+        CustList.Close();
         if (not MessageDisplayed) then
             ERROR('No message or wrong message was displayed!');
-
-        CustList.Close();
     end;
 
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        if (StrLen(Message) = 0) then
-            ERROR('Message was empty!');
-
-        //  intentional error
-        Error('Message is %1', Message);
         MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world - Aries');
     end;
 
