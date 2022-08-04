@@ -23,6 +23,8 @@
         if (StrLen(Message) = 0) then
             ERROR('Message was empty!');
 
+        //  intentional error
+        Error('Message is %1', Message);
         MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world - Aries');
     end;
 
