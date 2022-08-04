@@ -22,6 +22,12 @@
                              "name":  "Any",
                              "id":  "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
                              "version":  "19.0.0.0"
+                         },
+                         {
+                            "id":  "2d4ecdff-bb3a-4289-828e-55efea4cf8b4",
+                            "name":  "App 1 v1",
+                            "publisher":  "v3ux",
+                            "version":  "1.0.0.0"
                          }
                      ],
     "screenshots":  [
