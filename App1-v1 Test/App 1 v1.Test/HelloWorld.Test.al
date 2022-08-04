@@ -8,6 +8,8 @@
     var
         CustList: TestPage "Customer List";
     begin
+        MessageDisplayed := false;
+
         CustList.OpenView();
         CustList.Close();
         if (not MessageDisplayed) then
@@ -17,7 +19,7 @@
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        MessageDisplayed := MessageDisplayed or (StrLen(Message) > 0);
+        MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world - Aries');
     end;
 
     var
