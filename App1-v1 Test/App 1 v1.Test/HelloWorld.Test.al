@@ -11,9 +11,10 @@
         MessageDisplayed := false;
 
         CustList.OpenView();
-        CustList.Close();
         if (not MessageDisplayed) then
-            ERROR('Message was not displayed!');
+            ERROR('No message or wrong message was displayed!');
+
+        CustList.Close();
     end;
 
     [MessageHandler]
