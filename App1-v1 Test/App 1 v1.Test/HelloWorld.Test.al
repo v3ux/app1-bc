@@ -19,9 +19,6 @@
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        if (StrLen(Message) > 0) then
-            Error('Message has string with length %1', StrLen(Message));
-
         MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world - Aries');
     end;
 
